@@ -1,0 +1,11 @@
+ul.nav.navbar-nav
+  li class="#{(params[:controller] == 'dashboard') ? 'active' : ''}" = link_to t('menu.home'), root_url
+  li class="#{(params[:controller] == 'help') ? 'active' : ''}" = link_to t('menu.help'), '#'
+- unless devise_controller?
+  ul.nav.navbar-nav.navbar-right
+    li
+      p.navbar-text
+        | &nbsp;
+        = link_to t('menu.sign_in').html_safe, new_user_session_url
+        | &nbsp;|&nbsp;
+        = link_to t('menu.sign_up').html_safe, new_user_registration_url

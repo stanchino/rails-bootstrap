@@ -1,0 +1,31 @@
+ul.nav.navbar-nav
+  li class="#{(params[:controller] == 'dashboard') ? 'active' : ''}" = link_to t('menu.home'), user_root_url
+  li
+    a href='#' = t('menu.messages')
+  li
+    a href='#' = t('menu.reports')
+  li class="#{(params[:controller] == 'admin') ? 'active' : ''}" = link_to t('menu.admin'), '#'
+  li class="#{(params[:controller] == 'help') ? 'active' : ''}" = link_to t('menu.help'), '#'
+  li.dropdown
+    a.dropdown-toggle data-toggle='dropdown' href='#'
+      = t('menu.profile')
+      | &nbsp;
+      span.fa.fa-caret-down
+    ul.dropdown-menu
+      li
+        a href='#' = t('menu.details')
+      li
+        a href='#' = t('menu.licensing')
+      li
+        a href='#' = t('menu.education')
+ul.nav.navbar-nav.navbar-right
+  li
+    p.navbar-text.avatar
+      = image_tag(@user.try(:avatar_url), size: '30x30')
+      | &nbsp;
+      = link_to edit_user_registration_path do
+        = @user.email.html_safe
+        | &nbsp;
+        span.fa.fa-cog
+  li
+    = link_to t('menu.sign_out').html_safe, destroy_user_session_path, method: 'delete'

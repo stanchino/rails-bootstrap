@@ -1,0 +1,28 @@
+ul.nav.navbar-nav
+  li class="#{(params[:controller] == 'dashboard') ? 'active' : ''}" = link_to t('menu.home'), admin_root_url
+  li
+    a href='#' = t('menu.messages')
+  li.dropdown
+    a.dropdown-toggle data-toggle='dropdown' href='#'
+      = t('menu.profile')
+      b.caret
+    ul.dropdown-menu
+      li
+        a href='#' = t('menu.details')
+      li
+        a href='#' = t('menu.licensing')
+      li
+        a href='#' = t('menu.education')
+  li
+    a href='#' = t('menu.reports')
+  li class="#{(params[:controller] == 'admin') ? 'active' : ''}" = link_to t('menu.admin'), '#'
+  li class="#{(params[:controller] == 'help') ? 'active' : ''}" = link_to t('menu.help'), '#'
+ul.nav.navbar-nav.navbar-right
+  li
+    p.navbar-text.avatar
+      = image_tag(current_admin.try(:avatar_url), size: '30x30')
+      | &nbsp;
+      = link_to "#{current_admin.email}&nbsp;".html_safe, edit_admin_password_url
+      = link_to '<span class=\'glyphicon glyphicon-cog\'></span>'.html_safe, edit_admin_password_url
+      | &nbsp;&nbsp;|&nbsp;
+      = link_to t('menu.logout').html_safe, destroy_admin_session_url, method: 'delete'

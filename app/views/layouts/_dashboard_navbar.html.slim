@@ -1,0 +1,11 @@
+nav.navbar.navbar-default.navbar-static-top
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed data-target='#navbar' data-toggle='collapse' type='button' aria-expanded="false"
+        span.sr-only Toggle Navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to page_name, root_url, class: 'navbar-brand'
+    #navbar.collapse.navbar-collapse
+      = render menu
