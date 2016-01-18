@@ -1,0 +1,13 @@
+engines:
+  rubocop:
+    enabled: true
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  duplication:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
