@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 /.env
+/.travis.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
