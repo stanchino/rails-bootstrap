@@ -1,4 +1,7 @@
 == README
+{<img src="https://codeclimate.com/github/stanchino/rails-bootstrap/badges/gpa.svg" />}[https://codeclimate.com/github/stanchino/rails-bootstrap]
+{<img src="https://codeclimate.com/github/stanchino/rails-bootstrap/badges/coverage.svg" />}[https://codeclimate.com/github/stanchino/rails-bootstrap/coverage]
+{<img src="https://codeclimate.com/github/stanchino/rails-bootstrap/badges/issue_count.svg" />}[https://codeclimate.com/github/stanchino/rails-bootstrap]
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
