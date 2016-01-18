@@ -1,4 +1,7 @@
 language: ruby
 rvm: 2.3.0
 before_script:
-  - "bundle exec rake db:test:prepare"
+  - "bundle exec rake db:test:prepares"
+addons:
+  code_climate:
+    repo_token: "85996efd1bd10cd52c904c0650d38426771d719005f3d9cbe95a4014d74c6605"
